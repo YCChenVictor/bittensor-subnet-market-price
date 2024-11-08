@@ -33,8 +33,11 @@
 # class TemplateValidatorNeuronTestCase(unittest.TestCase):
 #     """
 #     This class contains unit tests for the RewardEvent classes.
-#     The tests cover different scenarios where completions may or may not be successful and the reward events are checked that they don't contain missing values.
-#     The `reward` attribute of all RewardEvents is expected to be a float, and the `is_filter_model` attribute is expected to be a boolean.
+#     The tests cover different scenarios where completions may or may not be
+#     successful and the reward events are checked that they don't contain missing
+#     values.
+#     The `reward` attribute of all RewardEvents is expected to be a float, and the
+#     `is_filter_model` attribute is expected to be a boolean.
 #     """
 
 #     def setUp(self):
@@ -50,7 +53,8 @@
 #         pass
 
 #     def test_sync_error_if_not_registered(self):
-#         # TODO: Test that the validator throws an error if it is not registered on metagraph
+#         # TODO: Test that the validator throws an error if it is not registered on
+#         metagraph
 #         pass
 
 #     def test_forward(self):
@@ -67,7 +71,8 @@
 #         #     ],
 #         #     # Construct a dummy query.
 #         #     synapse=MarketPriceSynapse(dummy_input=self.neuron.step),
-#         #     # All responses have the deserialize function called on them before returning.
+#         #     # All responses have the deserialize function called on them before
+#               returning.
 #         #     deserialize=True,
 #         # )
 
@@ -81,7 +86,8 @@
 #             axons=[self.metagraph.axons[uid] for uid in self.miner_uids],
 #             # Construct a dummy query.
 #             synapse=MarketPriceSynapse(dummy_input=self.neuron.step),
-#             # All responses have the deserialize function called on them before returning.
+#             # All responses have the deserialize function called on them before
+#             returning.
 #             deserialize=True,
 #         )
 
@@ -91,13 +97,15 @@
 
 #     def test_reward_with_nan(self):
 #         # TODO: Test that NaN rewards are correctly sanitized
-#         # TODO: Test that a bt.logging.warning is thrown when a NaN reward is sanitized
+#         # TODO: Test that a bt.logging.warning is thrown when a NaN reward is
+#         sanitized
 #         responses = self.dendrite.query(
 #             # Send the query to miners in the network.
 #             axons=[self.metagraph.axons[uid] for uid in self.miner_uids],
 #             # Construct a dummy query.
 #             synapse=MarketPriceSynapse(dummy_input=self.neuron.step),
-#             # All responses have the deserialize function called on them before returning.
+#             # All responses have the deserialize function called on them before
+#             returning.
 #             deserialize=True,
 #         )
 

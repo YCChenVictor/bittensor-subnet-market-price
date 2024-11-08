@@ -99,7 +99,8 @@
 
 #     def test_reward_with_nan(self):
 #         # TODO: Test that NaN rewards are correctly sanitized
-#         # TODO: Test that a bt.logging.warning is thrown when a NaN reward is sanitized
+#         # TODO: Test that a bt.logging.warning is thrown when a NaN reward is
+#           sanitized
 #         responses = self.dendrite.query(
 #             # Send the query to miners in the network.
 #             axons=[self.metagraph.axons[uid] for uid in self.miner_uids],

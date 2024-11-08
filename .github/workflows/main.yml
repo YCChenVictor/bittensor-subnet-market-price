@@ -1,0 +1,17 @@
+name: market price CI
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install dependencies
+      run: pip install .
+    - name: Lint Code
+      run: black . && flake8 .
+    - name: Run tests
+      run: pytest .

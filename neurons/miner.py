@@ -201,9 +201,8 @@ class Miner(BaseMinerNeuron):
             # requests from validators.
             if not self.metagraph.validator_permit[uid]:
                 bt.logging.warning(
-                    f"Blacklisting a request from non-validator hotkey {
-                        synapse.dendrite.hotkey
-                    }"
+                    f"Blacklisting a request from non-validator hotkey "
+                    f"{synapse.dendrite.hotkey}"
                 )
                 return True, "Non-validator hotkey"
 

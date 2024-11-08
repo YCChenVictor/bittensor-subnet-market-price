@@ -26,7 +26,8 @@
 
 #     for neuron in neurons:
 #         assert isinstance(neuron, bt.NeuronInfo)
-#         assert subtensor.is_hotkey_registered(netuid=netuid, hotkey_ss58=neuron.hotkey)
+#         assert subtensor.is_hotkey_registered(
+#             netuid=netuid, hotkey_ss58=neuron.hotkey)
 
 
 # @pytest.mark.parametrize("n", [16, 32, 64])
@@ -98,5 +99,6 @@
 #             assert dendrite.status_message == "OK"
 #             # check that outputs are not empty for successful responses
 #             assert synapse.dummy_output == synapse.dummy_input * 2
-#         # dont check for responses which take between timeout and max_time because they
+#         # dont check for responses which take between timeout and max_time because
+#           they
 #         # are not guaranteed to have a status code of 200 or 408
